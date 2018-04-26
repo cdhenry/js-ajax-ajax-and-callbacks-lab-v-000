@@ -3,8 +3,8 @@ $(document).ready(function (){
 
 function searchRepositories() {
   const searchTerms = document.getElementById("searchTerms").value
-  $.get(`https://api.github.com/users/${searchTerms}/repos`, function(response) {
-    console.log(response.map( repository => repository.name ));
+  $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function(response) {
+    console.log(response)
     $("#results").html();
   }).fail( function(error) {
     $("#errors").html("I'm sorry, there's been an error. Please try again.");
