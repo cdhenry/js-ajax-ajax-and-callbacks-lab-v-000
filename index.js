@@ -21,7 +21,7 @@ function searchRepositories() {
       `
     ));
   }).fail( function(error) {
-    $("#errors").html("I'm sorry, there's been an error. Please try again.");
+    $("#errors").html(displayError());
   });
 }
 
