@@ -2,7 +2,7 @@ $(document).ready(function (){
 });
 
 function searchRepositories() {
-  let term = document.getElementById("term").value
+  let term = document.getElementById("searchTerms").value
   const req = new XMLHttpRequest()
 }
 
