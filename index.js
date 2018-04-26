@@ -27,8 +27,20 @@ function searchRepositories() {
 
 function showCommits(el) {
   $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repository}/commits`, function(response) {
-    response.map(commit => console.log(commit.author))
-
+    $('#details').html(response.map( commit =>
+      `
+        <div style="width: 450px">
+          <div class="flex items-center border rounded">
+            <img class="flex-none mr1" src="${if commit.author !== null{commit.author.avatar_url}}" height="100" width="100">
+            <div>
+              <h3 class="m0"><a href="${commit.author.html_url}">${commit.author.login}</a></h3>
+              <p>${commit.sha}</p>
+            </div>
+          </div>
+        </div>
+        <br>
+      `
+    ));
   }).fail( function(error) {
     $("#errors").html("I'm sorry, there's been an error. Please try again.");
   });
