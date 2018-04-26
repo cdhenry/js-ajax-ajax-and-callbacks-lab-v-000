@@ -29,7 +29,7 @@ function showCommits(el) {
   $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repository}/commits`, function(response) {
     $('#details').html(response.map( commit =>
       `
-        ${console.log(commit.author)}
+        ${console.log(commit.author.avatar_url)}
         <div style="width: 450px">
           <div class="flex items-center border rounded">
             <img class="flex-none mr1" src="${commit.author.avatar_url}" height="100" width="100">
