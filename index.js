@@ -41,10 +41,10 @@ function showCommits(el) {
       `
     ));
   }).fail( function(error) {
-    $("#errors").html(displayError());
+    displayError();
   });
 }
 
 function displayError() {
-  return "I'm sorry, there's been an error. Please try again."
+  return $("#errors").html("I'm sorry, there's been an error. Please try again.")
 }
