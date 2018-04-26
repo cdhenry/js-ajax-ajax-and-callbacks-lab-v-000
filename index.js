@@ -17,6 +17,7 @@ function searchRepositories() {
             </div>
           </div>
         </div>
+        <br>
       `
     ));
   }).fail( function(error) {
