@@ -26,10 +26,6 @@ function searchRepositories() {
   });
 }
 
-unction displayError() {
-
-}
-
 function showCommits() {
 
 }
