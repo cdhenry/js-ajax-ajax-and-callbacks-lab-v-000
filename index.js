@@ -33,8 +33,9 @@ function showCommits(el) {
           <div class="flex items-center border rounded">
 
             <div>
-              
-              <p>${commit.sha}</p>
+
+              <h3>${commit.sha}</h3>
+              <p>${commit.commit.message}</p>
             </div>
           </div>
         </div>
