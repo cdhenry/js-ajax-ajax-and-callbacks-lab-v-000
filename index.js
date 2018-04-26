@@ -7,10 +7,12 @@ function searchRepositories() {
     console.log(response);
     $("#results").html(response.items.map( result =>
       `
-        <a href="${result.html_url}">${result.name}</a><br>
-        ${result.description}<br>
-        <a href="${result.owner.html_url}">${result.owner.login}</a><br>
-        <img src="${result.owner.avatar_url}" height="100" width="100"><br>
+        <div>
+          <h2><a href="${result.html_url}">${result.name}</a></h2>
+          ${result.description}<br>
+          <a href="${result.owner.html_url}">${result.owner.login}</a><br>
+          <img src="${result.owner.avatar_url}" height="100" width="100"><br>
+        </div>
       `
     ));
   }).fail( function(error) {
