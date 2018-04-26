@@ -9,7 +9,7 @@ function searchRepositories() {
       `
         <div>
           <h2><a href="${result.html_url}">${result.name}</a></h2>
-          ${result.description}<br>
+          <p>${result.description}</p>
           <a href="${result.owner.html_url}">${result.owner.login}</a><br>
           <img src="${result.owner.avatar_url}" height="100" width="100"><br>
         </div>
