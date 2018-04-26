@@ -5,6 +5,10 @@ function searchRepositories() {
 
 }
 
-function showCommits() {
+function displayError() {
   
+}
+
+function showCommits() {
+
 }
