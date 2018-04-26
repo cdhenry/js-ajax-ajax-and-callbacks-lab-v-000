@@ -6,7 +6,7 @@ function searchRepositories() {
   $.get(`https://api.github.com/users/${repository}/repos`, function(response) {
 
     $("#results").html(reponse);
-  }).fail(function(error) {
+  }).fail( function(error) {
     $("#errors").html("I'm sorry, there's been an error. Please try again.");
   });
 }
