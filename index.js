@@ -4,7 +4,6 @@ $(document).ready(function (){
 function searchRepositories() {
   const searchTerms = document.getElementById("searchTerms").value
   $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function(response) {
-    console.log(response);
     $("#results").html(response.items.map( result =>
       `
         <div style="width: 450px">
@@ -28,6 +27,6 @@ function searchRepositories() {
 
 function showCommits(el) {
   $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repository}/commits`, function(response) {
-    
+
   }
 }
