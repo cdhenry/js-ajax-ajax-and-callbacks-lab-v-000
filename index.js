@@ -3,7 +3,7 @@ $(document).ready(function (){
 
 function searchRepositories() {
   let repository = document.getElementById("searchTerms").value
-  $.get(`https://api.github.com/users/${repoName}/repos`, function(response) {
+  $.get(`https://api.github.com/users/${repository}/repos`, function(response) {
 
     $("#results").html(reponse);
   }).fail(function(error) {
