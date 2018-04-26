@@ -10,7 +10,8 @@ function searchRepositories() {
         <div style="width: 300px">
           <div class="flex items-center border rounded">
             <img class="flex-none mr1" src="${result.owner.avatar_url}" height="100" width="100">
-            <h2><a href="${result.html_url}">${result.name}</a></h2>
+            <div>
+            <h2 class="m0"><a href="${result.html_url}">${result.name}</a></h2>
             <p>${result.description}</p>
             <a href="${result.owner.html_url}">${result.owner.login}</a><br>
             <br>
