@@ -7,7 +7,7 @@ function searchRepositories() {
   $.get(`https://api.github.com/users/${repoName}/repos`, function(response) {
 
     $("#results").html(reponse)
-  }
+  });
 }
 
 // function showRepositories(event, data) {
