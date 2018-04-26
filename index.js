@@ -7,7 +7,7 @@ function searchRepositories() {
 
     $("#results").html(reponse);
   }).fail(function(error) {
-    $("#errors").html(error);
+    $("#errors").html("I'm sorry, there's been an error. Please try again.");
   });
 }
 
