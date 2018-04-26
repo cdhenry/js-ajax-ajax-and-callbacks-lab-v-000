@@ -2,10 +2,10 @@ $(document).ready(function (){
 });
 
 function searchRepositories() {
-  let name = document.getElementById("searchTerms").value
+  let repoName = document.getElementById("searchTerms").value
   const req = new XMLHttpRequest()
   req.addEventListener("load", showRepositories);
-  req.open("GET", `https://api.github.com/users/${name}/repos`)
+  req.open("GET", `https://api.github.com/users/${repoName}/repos`)
   req.send()
 }
 
