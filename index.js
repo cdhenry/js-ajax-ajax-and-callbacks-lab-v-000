@@ -4,8 +4,10 @@ $(document).ready(function (){
 function searchRepositories() {
   const searchTerms = document.getElementById("searchTerms").value
   $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function(response) {
-    console.log(response.items.map( result => `${result.name}` ));
-    $("#results").html();
+    console.log(response);
+    $("#results").html(response.items.map( result =>
+      `${result.name}`
+    ));
   }).fail( function(error) {
     $("#errors").html("I'm sorry, there's been an error. Please try again.");
   });
