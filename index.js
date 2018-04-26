@@ -32,7 +32,7 @@ function showCommits(el) {
         ${console.log(commit)}
         <div style="width: 450px">
           <div class="flex items-center border rounded">
-            <img class="flex-none mr1" src="${commit.author.avatar_url}" height="100" width="100">
+            <img class="flex-none mr1" src="${commit.author}" height="100" width="100">
             <div>
               <h3 class="m0"><a href="${commit.author.html_url}">${commit.author.login}</a></h3>
               <p>${commit.sha}</p>
