@@ -5,7 +5,7 @@ function searchRepositories() {
   const searchTerms = document.getElementById("searchTerms").value
   $.get(`https://api.github.com/users/${repository}/repos`, function(response) {
     debugger;
-    $("#results").html(reponse);
+    $("#results").html();
   }).fail( function(error) {
     $("#errors").html("I'm sorry, there's been an error. Please try again.");
   });
