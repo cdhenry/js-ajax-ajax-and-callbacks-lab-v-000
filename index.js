@@ -2,7 +2,6 @@ $(document).ready(function (){
 });
 
 function searchRepositories() {
-  debugger;
   let repoName = document.getElementById("searchTerms").value
   $.get(`https://api.github.com/users/${repoName}/repos`, function(response) {
 
