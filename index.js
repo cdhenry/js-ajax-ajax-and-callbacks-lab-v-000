@@ -7,11 +7,10 @@ function searchRepositories() {
     console.log(response);
     $("#results").html(response.items.map( result =>
       `
-        ${result.name}<br>
+        <a href="${result.html_url}">${result.name}</a><br>
         ${result.description}<br>
-        ${result.html_url}<br>
-        ${result.owner.login}<br>
-        ${result.owner.html_url}<br>
+        <br>
+        <a href="${result.owner.html_url}">${result.owner.login}</a><br>
         <img src="${result.owner.avatar_url}"><br>
       `
     ));
