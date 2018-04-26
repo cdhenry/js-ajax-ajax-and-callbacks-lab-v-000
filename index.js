@@ -7,7 +7,7 @@ function searchRepositories() {
     console.log(response);
     $("#results").html(response.items.map( result =>
       `
-        <div style="width: 600px">
+        <div style="width: 300px">
           <div class="flex items-center border rounded">
             <img class="flex-none mr1" src="${result.owner.avatar_url}" height="100" width="100">
             <div>
