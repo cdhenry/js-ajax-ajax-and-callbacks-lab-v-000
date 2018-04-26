@@ -10,7 +10,7 @@ function searchRepositories() {
         <a href="${result.html_url}">${result.name}</a><br>
         ${result.description}<br>
         <a href="${result.owner.html_url}">${result.owner.login}</a><br>
-        <img src="${result.owner.avatar_url}" height="42" width="42"><br>
+        <img src="${result.owner.avatar_url}" height="100" width="100"><br>
       `
     ));
   }).fail( function(error) {
