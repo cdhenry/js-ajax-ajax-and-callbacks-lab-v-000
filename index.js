@@ -27,7 +27,7 @@ function searchRepositories() {
 
 function showCommits(el) {
   $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repository}/commits`, function(response) {
-    $('#details').html(response.map( function(commit) { if (commit.author){ return
+    $('#details').html(response.map( function(commit) { if (commit.author !== null){ return
       `
         <div style="width: 450px">
           <div class="flex items-center border rounded">
