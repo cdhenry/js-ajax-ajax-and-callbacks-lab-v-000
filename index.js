@@ -4,7 +4,7 @@ $(document).ready(function (){
 function searchRepositories() {
   const searchTerms = document.getElementById("searchTerms").value
   $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function(response) {
-    console.log(response.items.map( result => result));
+    console.log(response.items.map( result => result ));
     $("#results").html();
   }).fail( function(error) {
     $("#errors").html("I'm sorry, there's been an error. Please try again.");
