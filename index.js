@@ -27,6 +27,7 @@ function searchRepositories() {
 
 function showCommits(el) {
   $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repository}/commits`, function(response) {
+    console.log(response);
      $('#details').html()
   }).fail( function(error) {
     $("#errors").html("I'm sorry, there's been an error. Please try again.");
