@@ -6,7 +6,14 @@ function searchRepositories() {
   $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function(response) {
     console.log(response);
     $("#results").html(response.items.map( result =>
-      `${result.name}`
+      `
+        ${result.name}<br>
+        ${result.description}<br>
+        ${result.html_url}<br>
+        ${result.owner.login}<br>
+        ${result.owner.html_url}<br>
+        <img src="${result.owner.avatar_url}"><br>
+      `
     ));
   }).fail( function(error) {
     $("#errors").html("I'm sorry, there's been an error. Please try again.");
