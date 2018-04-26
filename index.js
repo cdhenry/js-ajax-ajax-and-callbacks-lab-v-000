@@ -12,6 +12,7 @@ function searchRepositories() {
             <img class="flex-none mr1" src="${result.owner.avatar_url}" height="100" width="100">
             <div>
               <h3 class="m0"><a href="${result.html_url}">${result.name}</a></h3>
+              <p><a href="#" data-repository="${result.name}" data-owner="${result.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
               <p>${result.description}</p>
               <a href="${result.owner.html_url}">${result.owner.login}</a><br><br>
             </div>
@@ -25,15 +26,7 @@ function searchRepositories() {
   });
 }
 
-// function showRepositories(event, data) {
-//   const repos = JSON.parse(this.responseText)
-//   const src = document.getElementById("repository-template").innerHTML
-//   const template = Handlebars.compile(src)
-//   const repoList = template(repos)
-//   document.getElementById("repositories").innerHTML = repoList
-// }
-
-function displayError() {
+unction displayError() {
 
 }
 
