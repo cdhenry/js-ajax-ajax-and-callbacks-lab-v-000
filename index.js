@@ -13,7 +13,7 @@ function searchRepositories() {
             <div>
               <h3 class="m0"><a href="${result.html_url}">${result.name}</a></h3>
               <p>${result.description}</p>
-              <a href="${result.owner.html_url}">${result.owner.login}</a><br>
+              <a href="${result.owner.html_url}">${result.owner.login}</a><br><br>
             </div>
           </div>
         </div>
