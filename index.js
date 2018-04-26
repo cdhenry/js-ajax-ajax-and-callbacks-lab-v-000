@@ -9,7 +9,6 @@ function searchRepositories() {
       `
         <a href="${result.html_url}">${result.name}</a><br>
         ${result.description}<br>
-        <br>
         <a href="${result.owner.html_url}">${result.owner.login}</a><br>
         <img src="${result.owner.avatar_url}"><br>
       `
